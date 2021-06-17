@@ -1,0 +1,40 @@
+static const struct vcha_node types_value_tab[] = {
+    // extend
+    {"short", 'h'},
+    {"int", 'i'},
+    {"uint", 'I'},
+    {"long", 'l'},
+    {"long long", 'q'},
+    // base
+    {"int8", 'b'},
+    {"uint8", 'B'},
+    {"int16", 'h'},
+    {"uint16", 'H'},
+    {"int32", 'i'},
+    {"uint32", 'I'},
+    {"int64", 'q'},
+    {"uint64", 'Q'},
+    {"byte", 's'},
+    {"char", 'S'},
+    //
+    {NULL, 'x'}
+};
+ */
+//
+Format	C Type	    Java type	Python type	Notes
+x	N/A	    N/A	        N/A		pad byte, no associated value
+b	int8_t	    byte	int		signed byte
+B	uint8_t	    byte	int		unsigned byte
+h	int16_t	    short	int		signed 16-bit
+H	uint16_t    short	int		unsigned 16-bit
+i	int32_t	    int	        int		signed 32-bit
+I	uint32_t    int	        int		unsigned 32-bit
+l	int32_t	    int	        int		signed 32-bit
+L	uint32_t    int	        int		unsigned 32-bit
+q	int64_t	    long	int		signed 64-bit
+Q	uint64_t    long	int		unsigned 64-bit
+r	uint64_t    long	int		record number
+s	char[]	    String	str		fixed-length string
+S	char[]	    String	str		NUL-terminated string
+t	uint8_t	    byte	int		fixed-length bit field
+u	WT_ITEM *   byte[]	str		raw byte array

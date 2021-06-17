@@ -1,0 +1,9 @@
+clie:level(1);
+cuser_con:find();
+clie:level(4p);
+test_con:find()|exten:pretty("iii");
+test_con:find();|exten:pretty("iii");
+test_con:find();
+test_con:find()|extend:pretty("oiii");
+test_con:find();
+clie:level(4p);

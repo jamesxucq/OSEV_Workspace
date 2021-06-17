@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class_attrib>
+<version>26345614</version>
+<integrity>true<integrity>
+<inherit method="method_name">class_name</inherit>
+<inherit method="method_name">class_name</inherit>
+<inherit method="method_name">class_name</inherit>
+<inherit method="method_name">class_name</inherit>
+</class_attrib>
+xxes <[ax int, bx=6 int], [cx double, dx double] auto, // 自动生成这个变量的方法
+    test1(ax,bx), 
+    test2(bx,cx),
+    test3(bx),
+    xxes(ax, bx)> { // 这个类的构造函数，符合构造要求的能生成对象，用语查询
+	if(test3() > 1) return REJECTION;
+	return ACCEPTION;
+    }
+
+xxes:test1 <(void) void, (xx &int, pp int)> /* 定义类的一个操作 */
+{
+    return;
+}
+
+xxes:test2 <(xx int, pt double)> /* 定义类的一个操作, 没外部接口是private */
+{
+    return 1;
+}
+
+xxes:test3 <(xx int, pt double)> /* 定义类的一个操作, 没外部接口是private */
+{
+    return 1;
+}
+
+xxes:xxes<(xx double, pp int) int,(&atx int, &btx=6 int)> // 从基础够造这个对象
+{
+    atx = pp;
+    btx = xx;
+    if(0 > xx) return REJECTION;
+    return ACCEPTION;
+}

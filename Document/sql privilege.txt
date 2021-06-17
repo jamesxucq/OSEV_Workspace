@@ -1,0 +1,20 @@
+/*
+SELECT	Ability to perform SELECT statements on the table.
+INSERT	Ability to perform INSERT statements on the table.
+UPDATE	Ability to perform UPDATE statements on the table.
+DELETE	Ability to perform DELETE statements on the table.
+REFERENCES	Ability to create a constraint that refers to the table.
+ALTER	Ability to perform ALTER TABLE statements to change the table definition.
+ALL	ALL does not revoke all permissions for the table. Rather, it revokes the ANSI-92 permissions which are SELECT, INSERT, UPDATE, DELETE, and REFERENCES.
+ */
+/*
+GRANT privileges ON object TO user;
+GRANT SELECT, INSERT, UPDATE, DELETE ON employees TO smithj;
+GRANT ALL ON employees TO smithj;
+GRANT SELECT ON employees TO public;
+ * 
+REVOKE privileges ON object FROM user;
+REVOKE DELETE ON employees FROM anderson;
+REVOKE ALL ON employees FROM anderson;
+REVOKE SELECT ON employees FROM public;
+ */

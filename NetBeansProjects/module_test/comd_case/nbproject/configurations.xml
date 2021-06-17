@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <itemPath>data_case.c</itemPath>
+      <itemPath>metho_case.c</itemPath>
+      <itemPath>role_clas.c</itemPath>
+      <itemPath>seria_case.c</itemPath>
+      <itemPath>user_clas.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+      <itemPath>const.ao</itemPath>
+      <itemPath>invok.ao</itemPath>
+      <itemPath>privi_case.ao</itemPath>
+      <itemPath>privi_struct.ao</itemPath>
+      <itemPath>query.ao</itemPath>
+      <itemPath>status_case.ao</itemPath>
+      <itemPath>todo.txt</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="测试文件"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <item path="const.ao" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="data_case.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="invok.ao" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="metho_case.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="privi_case.ao" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="privi_struct.ao" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="query.ao" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="role_clas.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="seria_case.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="status_case.ao" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="todo.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="user_clas.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <item path="const.ao" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="data_case.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="invok.ao" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="metho_case.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="privi_case.ao" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="privi_struct.ao" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="query.ao" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="role_clas.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="seria_case.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="status_case.ao" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="todo.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="user_clas.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

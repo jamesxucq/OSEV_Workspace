@@ -1,0 +1,63 @@
+Built-In Roles（内置角色）： 
+1. 数据库用户角色：read、readWrite; 
+2. 数据库管理角色：dbAdmin、dbOwner、userAdmin； 
+3. 集群管理角色：clusterAdmin、clusterManager、clusterMonitor、hostManager； 
+4. 备份恢复角色：backup、restore； 
+5. 所有数据库角色：readAnyDatabase、readWriteAnyDatabase、userAdminAnyDatabase、dbAdminAnyDatabase 
+6. 超级用户角色：root 
+// 这里还有几个角色间接或直接提供了系统超级用户的访问（dbOwner 、userAdmin、userAdminAnyDatabase） 
+7. 内部角色：__system
+
+Read：允许用户读取指定数据库 
+readWrite：允许用户读写指定数据库 
+dbAdmin：允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问system.profile 
+userAdmin：允许用户向system.users集合写入，可以找指定数据库里创建、删除和管理用户 
+clusterAdmin：只在admin数据库中可用，赋予用户所有分片和复制集相关函数的管理权限。 
+readAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的读权限 
+readWriteAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的读写权限 
+userAdminAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的userAdmin权限 
+dbAdminAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的dbAdmin权限。 
+root：只在admin数据库中可用。超级账号，超级权限
+
+
+数据库角色
+
+针对Mongodb数据库中的各种角色进行说明
+数据库访问
+
+角色名称	拥有权限
+read	允许读取指定数据库的角色
+readWrite	允许读写指定数据库的角色
+数据库管理
+
+角色名称	拥有权限
+dbAdmin	允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问system.profile
+userAdmin	允许管理当前数据库的用户，如创建用户、为用户授权
+dbOwner	数据库拥有者(最高)，集合了dbAdmin/userAdmin/readWrite角色权限
+集群管理
+
+角色名称	拥有权限
+clusterAdmin	集群最高管理员，集合clusterManager/clusterMonitor/hostManager角色权限
+clusterManager	集群管理角色，允许对分片和副本集集群执行管理操作，如addShard，resync等
+clusterMonitor	集群监控角色，允许对分片和副本集集群进行监控，如查看serverStatus
+hostManager	节点管理角色，允许监控和管理节点，比如killOp、shutdown操作
+备份恢复
+
+角色名称	拥有权限
+backup	备份权限，允许执行mongodump操作
+restore	恢复权限，允许执行mongoresotre操作
+数据库通用角色
+
+角色名称	拥有权限
+readAnyDatabase	允许读取所有数据库
+readWriteAnyDatabase	允许读写所有数据库
+userAdminAnyDatabase	允许管理所有数据库的用户
+dbAdminAnyDatabase	允许管理所有数据库
+特殊角色
+
+角色名称	拥有权限
+root	超级管理员，拥有所有权限
+__system	内部角色，用于集群间节点通讯
+基本是这些，有兴趣可看看官方的内置角色
+Mongodb 的用户及角色数据一般位于当前实例的 admin数据库，system.users存放了所有数据；
+存在例外的情况是分片集群，应用接入mongos节点，鉴权数据则存放于config节点。因此有时候为了方便分片集群管理，会单独为分片内部节点创建独立的管理操作用户；

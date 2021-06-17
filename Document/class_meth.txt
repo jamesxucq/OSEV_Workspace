@@ -1,0 +1,11 @@
+test:tst<(void)int, (x int)> {return 0x00;}
+test:tst<(x int), (a int)int> {f=x int; p=a int; if(f){return 0x01;} return 0x00;}
+test<[xx=8 int, ax int], [cx int] auto, tst(xx), tpp(ax)>;
+
+
+
+<?xml version="1.0" encoding="UTF-8"?><class_metada><object_id>fe739b30f77c335900000000</object_id><clas_name>test</clas_name><clas_attr><version>1</version><integrity>true</integrity></clas_attr></class_metada>
+test<[xx=8 int, ax int], [cx int] auto, tst(xx), tpp(ax)>
+test:test<(aa int)int> {xx = aa; return 0x00;}
+test:test<(aa int, bb int)int> {xx = bb; ax = aa; return 0x00;}
+test:tst<(yy int)int, (ex int)> {ex = yy; return 0x00;}

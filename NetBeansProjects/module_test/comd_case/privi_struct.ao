@@ -1,0 +1,64 @@
+/*
+#define USERN_LENGTH            32
+#define PASWD_LENGTH         32
+#define SALT_LENGTH             16
+
+#define MAX_PRIVI_SIZE   64
+#define MAX_ROLE_SIZE  8
+
+//
+    typedef struct {
+        osv_oid_t oid;
+        uint32 privile_mask; // privilege
+    } dist_privi;
+
+//
+
+    typedef struct {
+        osv_oid_t oid;
+        uchar role_type; // 0x00:osev 0x01:data
+        char role_name[USERN_LENGTH];
+        dist_privi priv_array[MAX_PRIVI_SIZE];
+    } role_privi;
+
+    // container
+
+    typedef struct {
+        osv_oid_t oid;
+        char user_name[USERN_LENGTH];
+        char password[PASWD_LENGTH];
+        char salt[SALT_LENGTH];
+
+        union {
+            osv_oid_t role_oid[MAX_ROLE_SIZE];
+            role_privi *role_poin[MAX_ROLE_SIZE];
+        };
+    } user_privi;
+*/
+
+/*
+#define DEFA_ROLE_CLAS  "role"
+#define DEFA_USER_CLAS  "user"
+    //
+#define AUTH_ROLES_CONT  "roles_con"
+#define AUTH_OUSER_CONT  "ouser_con"
+#define AUTH_CUSER_CONT  "cuser_con"
+*/
+
+//
+//
+:level(2+);
+
+role <[role_type uint8, role_name char(32), priv_array char(1024)]>;
+user <[user_name char(32), password char(32), salt char(16), role_oid char(96)]>;
+
+
+//
+:level(4+);
+
+// forma_types:key_format=r,value_format=B32s1024s,columns=(stoid,role_type,role_name,priv_array)
+witi:witi("roles_con", "role") > odb;
+
+// forma_types:key_format=r,value_format=32s32s16s96s,columns=(stoid,user_name,password,salt,role_oid)
+witi:witi("ouser_con", "user") > odb;
+witi:witi("cuser_con", "user") > odb;

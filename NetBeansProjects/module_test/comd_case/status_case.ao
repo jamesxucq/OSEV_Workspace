@@ -1,0 +1,16 @@
+""
+//
+osev:open("admin"); // :status
+
+//
+osev:status(SHOW, "xodb");
+odb:status(SHOW, "xodb");
+xodb:status(SHOW);
+
+osev:status(SET_LEVEL, "xodb", "12p");
+odb:status(SET_LEVEL, "xodb", "12p");
+xodb:status(SET_LEVEL, "12p");
+
+osev:status(RESET_PRIVILE, "xodb");
+odb:status(RESET_PRIVILE, "xodb");
+xodb:status(RESET_PRIVILE);

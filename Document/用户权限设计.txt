@@ -1,0 +1,73 @@
+// #include "privile_obje.h"
+    //
+#define INVA_PRIV       0x00000000
+
+    // general scope
+#define SCOP_OSEV       0x01000000
+#define SCOP_OSDB       0x02000000 // osdb level
+#define SCOP_EOBJ       0x04000000
+#define PRIVI_SCOPE(PRIMK)    (PRIMK & 0xFFFF0000)
+    // SCOP_OSDB sub scope
+#define LEVE_ONE            0x00010000
+#define LEVE_TWOP           0x00020000
+#define LEVE_THRE           0x00040000
+#define LEVE_FOUP           0x00080000
+#define OSDB_LEVE_ALL (LEVE_ONE | LEVE_TWOP | LEVE_THRE | LEVE_FOUP)
+#define CLEAR_SLEVE(PRIMK)    (PRIMK & 0xFF00FFFF)
+    //
+    // general privile
+#define PRIV_ALL        0x0000FFFF
+#define PRIVI_VALUE(PRIMK)    (PRIMK & 0x0000FFFF)
+    // SCOP_OSEV/SCOP_OSDB privile
+#define OBSV_ROUS       0x00000001 // role / user
+#define OBSV_ODBM       0x00000002 // manage the odb
+#define OBSV_CLUST      0x00000004 // clust
+#define CLEAR_OBSV(PRIMK)    (PRIMK & 0xFFFFFF00)
+    // SCOP_OSDB / SCOP_OSDB LEVEL privile
+#define ODLE_READ       0x00000100
+#define ODLE_WRITE      0x00000200
+#define ODLE_EXECU      0x00000400
+#define CLEAR_ODLE(PRIMK)    (PRIMK & 0xFFFF00FF)
+    // SCOP_EOBJ privile
+#define COEN_ECHO       0x00000001
+#define COEN_CREAT      0x00000002
+#define COEN_DROP       0x00000004
+#define COEN_FIND       0x00000008
+#define COEN_UPDAT      0x00000010
+#define COEN_INSER      0x00000020
+#define COEN_FACTO      0x00000040
+#define COEN_INVOK      0x00000080
+#define CLEAR_COEN(PRIMK)    (PRIMK & 0xFFFF0000)
+    //
+
+//
+// conv_utili.c
+
+static struct conv_node priv_osev_tab[] = {
+    {"ALL_PRIVI", OBSV_ROUS | OBSV_ODBM | OBSV_CLUST}, //
+    {"ROUS", OBSV_ROUS}, // 
+    {"ODBM", OBSV_ODBM}, // 
+    {"CLUST", OBSV_CLUST}, // 
+    {NULL, 0x00}
+};
+
+static struct conv_node priv_odb_tab[] = {
+    {"ALL_PRIVI", ODLE_READ | ODLE_WRITE | ODLE_EXECU}, //
+    {"READ", ODLE_READ}, // 
+    {"WRITE", ODLE_WRITE}, // 
+    {"EXECU", ODLE_EXECU}, // 
+    {NULL, 0x00}
+};
+
+static struct conv_node role_cont_tab[] = {
+    {"ALL_PRIVI", COEN_ECHO | COEN_CREAT | COEN_DROP | COEN_FIND | COEN_UPDAT | COEN_INSER | COEN_FACTO | COEN_INVOK}, //
+    {"ECHO", COEN_ECHO}, // 
+    {"CREAT", COEN_CREAT}, // 
+    {"DROP", COEN_DROP}, // 
+    {"FIND", COEN_FIND}, // 
+    {"UPDAT", COEN_UPDAT}, // 
+    {"INSER", COEN_INSER}, // 
+    {"FACTO", COEN_FACTO}, // 
+    {"INVOK", COEN_INVOK}, // 
+    {NULL, 0x00}
+};

@@ -1,0 +1,148 @@
+// 0层空间, 混杂模式 level 0
+:level(0);
+
+// 1层空间, 定义类的方法 level 1
+:level(1);
+    xxes:test1 <(void) void, (xx &int, pp int)> /* 定义类的一个操作 */
+    {
+        return;	
+    }
+    xxes:test2 <(xx int, pt double)> /* 定义类的一个操作, 没外部接口是private */
+    {
+        return 1;
+    }
+    classname:ff <(tt double, &p char*)> /* 定义类的一个操作, 没外部接口是private */
+    {
+        return;
+    }
+    classname:xet <(void) int, (xx double, pp int, p char*)> /* 定义类的一个操作 */
+    {
+        return 2;
+    }
+
+xxes:xxes [(xx double, pp int) int,(&atx int, &btx=6 int)] // 从基础够造这个对象
+{
+    atx = pp;
+    btx = xx;
+    if(0 > xx) return REJECTION;
+    return ACCEPTION;
+}
+
+xxes:~xxes()
+{
+}
+
+MyContainer:qualifi <(ox object) bool> /* 没内部接口 */
+{
+    return IS_CLASS_OF(ox) == classtest;
+}
+
+MyCon:qualifi <(ox object) bool> /* 没内部接口 */
+{
+    if(IS_CLASS_OF(ox) == classtest){
+	if(ox:GetGg() > 0)
+	    return true;	
+    }
+
+    return false;
+}
+
+// AUTO, INVISI, HIDE
+// 2+层空间, 定义类 level 2+
+// 继承方法关系时，一对多合法，多对一需要用关键字(primary)说明,不然不合法
+:level(2+);
+
+xxes <[ax int, bx=6 int] INVISI, [cx double, dx double] AUTO, // 自动生成这个变量的方法
+    test1(ax,bx), 
+    test2(bx,cx),
+    test3(bx),
+    xxes(ax, bx)> { // 这个类的构造函数，符合构造要求的能生成对象，用语查询
+	if(test3() > 1) return REJECTION;
+	return ACCEPTION;
+    } /* 定义一个类 */
+
+// 创建字段索引,1为指定按升序创建索引，-1按降序来创建索引。oTest容器对象
+oTest:ensureIndex("xxes:test", 1);
+
+// xxes类型对象构造xxen时，
+// 出现了bx=>bz,bx=>dz一对多合法，ax=>az,bx=>az多对一不合法，
+xxen <[az int, bz=6 int, cz int, dz int] HIDE, 
+    test1(az primary,bz) HIDE,
+    test2(az,cz) INVISI,
+    test3(dz) AUTO>;
+
+classname <[xx=8 int, bx double, pp char(34)],
+    ff(bx,pp), 
+    xet(bx,xx,pp), 
+    xxes:test2(xx, bx)>; /* 定义一个类 */
+
+classtest <[gg int, tt double, uu char(34)],
+    ffxe(tt,gg head), 
+    xetyy(tt,uu), 
+    xxes>; /* 定义一个类 */
+
+classtxp <[gg int, tt double, uu char(34)],
+    ffxe(tt,gg), 
+    xetyy(tt,uu), 
+    xxes>; /* 定义一个类 */
+
+classquery <[dd varchar, xx int, pp char(34)],
+    xxes:ax(xx); // ax auto 变量绑定，相当于set_ax
+    classtest:ffxe(dd, xx), 
+    classname:ff(dd, pp)>{ // 这个类的构造函数
+	test1 > 1;
+	return REJECTION;
+    } /* 定义一个类 */
+MyContainer <MyContainer:qualifi(), 
+    DefCtair>;
+MyCon <MyCon:qualifi(), 
+    DefCtair>;
+
+// 3层空间, 操纵对象, 创建,删除对象 level 3
+:level(3);
+
+MyCon MyTestCon;
+
+MyContainer mycont;
+MyContainer myconx;
+
+main <(argc int, argv []char *) int> // 主函数
+{
+    return 0;
+}
+
+:inst(classtst);
+level:echo(new classtest)> mycont;
+:echo(new classtest)> mycont;
+:echo(new classtest)> mycont;
+
+:echo(new classtest)> myconx;
+:echo(new classtest)> myconx;
+:echo(new classtest)> myconx;
+
+level:echo(new classtest)> myconx:delete();
+
+// 4+层空间, 操纵容器对象 level 4+
+:level(4+);
+
+mycont:cat()| myconx;
+mycont:cat()| myconx;
+myconx:cat()> :stdout();
+myconx:cat()| FliterCon($1:GetGg()<0)> :stdout();
+myconx:cat()| MyTestCon;
+
+mycont:cat()| FliterCon($1:GetGg()<0)| mycont:delete();
+mycont:cat()| FliterCon($1:GetGg()<0)| $1.SetGg(5); 
+mycont:cat()| FliterCon($1:GetGg()<0)| $1.SetGg(5);
+:cat(mycont, myconx)> :stdout();
+:cat(mycont, myconx)> FliterCon($1:GetGg()<0 & $2:GetGg()<0)> :stdout();
+ 
+
+
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+跨层用. 单层用:
+
+
+

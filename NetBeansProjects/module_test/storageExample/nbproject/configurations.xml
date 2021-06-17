@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <logicalFolder name="mysql" displayName="mysql" projectFiles="true">
+        <logicalFolder name="include" displayName="include" projectFiles="true">
+          <logicalFolder name="atomic" displayName="atomic" projectFiles="true">
+            <itemPath>mysql/include/atomic/gcc_sync.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="mysql" displayName="mysql" projectFiles="true">
+            <logicalFolder name="psi" displayName="psi" projectFiles="true">
+              <itemPath>mysql/include/mysql/psi/mysql_memory.h</itemPath>
+              <itemPath>mysql/include/mysql/psi/mysql_thread.h</itemPath>
+              <itemPath>mysql/include/mysql/psi/psi.h</itemPath>
+              <itemPath>mysql/include/mysql/psi/psi_base.h</itemPath>
+              <itemPath>mysql/include/mysql/psi/psi_memory.h</itemPath>
+            </logicalFolder>
+            <itemPath>mysql/include/mysql/mysql_lex_string.h</itemPath>
+            <itemPath>mysql/include/mysql/service_my_snprintf.h</itemPath>
+            <itemPath>mysql/include/mysql/service_mysql_alloc.h</itemPath>
+          </logicalFolder>
+          <itemPath>mysql/include/byte_order_generic_x86.h</itemPath>
+          <itemPath>mysql/include/decimal.h</itemPath>
+          <itemPath>mysql/include/ft_global.h</itemPath>
+          <itemPath>mysql/include/hash.h</itemPath>
+          <itemPath>mysql/include/keycache.h</itemPath>
+          <itemPath>mysql/include/little_endian.h</itemPath>
+          <itemPath>mysql/include/m_ctype.h</itemPath>
+          <itemPath>mysql/include/m_string.h</itemPath>
+          <itemPath>mysql/include/my_alloc.h</itemPath>
+          <itemPath>mysql/include/my_atomic.h</itemPath>
+          <itemPath>mysql/include/my_base.h</itemPath>
+          <itemPath>mysql/include/my_bitmap.h</itemPath>
+          <itemPath>mysql/include/my_byteorder.h</itemPath>
+          <itemPath>mysql/include/my_check_opt.h</itemPath>
+          <itemPath>mysql/include/my_command.h</itemPath>
+          <itemPath>mysql/include/my_compare.h</itemPath>
+          <itemPath>mysql/include/my_compiler.h</itemPath>
+          <itemPath>mysql/include/my_config.h</itemPath>
+          <itemPath>mysql/include/my_dbug.h</itemPath>
+          <itemPath>mysql/include/my_global.h</itemPath>
+          <itemPath>mysql/include/my_icp.h</itemPath>
+          <itemPath>mysql/include/my_list.h</itemPath>
+          <itemPath>mysql/include/my_sqlcommand.h</itemPath>
+          <itemPath>mysql/include/my_sys.h</itemPath>
+          <itemPath>mysql/include/my_thread.h</itemPath>
+          <itemPath>mysql/include/my_thread_local.h</itemPath>
+          <itemPath>mysql/include/myisam.h</itemPath>
+          <itemPath>mysql/include/myisampack.h</itemPath>
+          <itemPath>mysql/include/mysql_com.h</itemPath>
+          <itemPath>mysql/include/prealloced_array.h</itemPath>
+          <itemPath>mysql/include/sql_string.h</itemPath>
+          <itemPath>mysql/include/thr_cond.h</itemPath>
+          <itemPath>mysql/include/thr_lock.h</itemPath>
+          <itemPath>mysql/include/thr_mutex.h</itemPath>
+          <itemPath>mysql/include/thr_rwlock.h</itemPath>
+          <itemPath>mysql/include/typelib.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="sql" displayName="sql" projectFiles="true">
+          <itemPath>mysql/sql/handler.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="storage" displayName="storage" projectFiles="true">
+          <logicalFolder name="heap" displayName="heap" projectFiles="true">
+            <itemPath>mysql/storage/heap/ha_heap.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="myisam" displayName="myisam" projectFiles="true">
+            <itemPath>mysql/storage/myisam/ha_myisam.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <logicalFolder name="library" displayName="library" projectFiles="true">
+      </logicalFolder>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="测试文件"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>mysql</Elem>
+    <Elem>library</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>mysql/storage/myisam</pElem>
+            <pElem>mysql/include</pElem>
+            <pElem>mysql/sql</pElem>
+            <pElem>mysql/libbinlogevents/export</pElem>
+            <pElem>mysql/libbinlogevents/include</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>mysql/storage/myisam</pElem>
+            <pElem>mysql/include</pElem>
+            <pElem>mysql/sql</pElem>
+            <pElem>mysql/libbinlogevents/export</pElem>
+            <pElem>mysql/libbinlogevents/include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <commandLine>./library/libmysqld.a -lm -lcrypt -ldl -lz -lrt -lpthread</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mysql/include/atomic/gcc_sync.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/byte_order_generic_x86.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/decimal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/ft_global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/hash.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/keycache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/little_endian.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/m_ctype.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/m_string.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_alloc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_atomic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_base.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_bitmap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_byteorder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_check_opt.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_command.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_compare.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_compiler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_dbug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_icp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_sqlcommand.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_sys.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_thread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_thread_local.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/myisam.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/myisampack.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/mysql_lex_string.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/mysql_memory.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/mysql_thread.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/psi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/psi_base.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/psi_memory.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/service_my_snprintf.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/service_mysql_alloc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql_com.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/prealloced_array.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/sql_string.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/thr_cond.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/thr_lock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/thr_mutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/thr_rwlock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/typelib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/sql/handler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/storage/heap/ha_heap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/storage/myisam/ha_myisam.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mysql/include/atomic/gcc_sync.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/byte_order_generic_x86.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/decimal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/ft_global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/hash.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/keycache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/little_endian.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/m_ctype.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/m_string.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_alloc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_atomic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_base.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_bitmap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_byteorder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_check_opt.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_command.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_compare.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_compiler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_dbug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_global.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_icp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_sqlcommand.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_sys.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_thread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/my_thread_local.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/myisam.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/myisampack.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/mysql_lex_string.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/mysql_memory.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/mysql_thread.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/psi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/psi_base.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/psi/psi_memory.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/service_my_snprintf.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql/service_mysql_alloc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="mysql/include/mysql_com.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/prealloced_array.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/sql_string.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/thr_cond.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/thr_lock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/thr_mutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/thr_rwlock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/include/typelib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/sql/handler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/storage/heap/ha_heap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="mysql/storage/myisam/ha_myisam.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

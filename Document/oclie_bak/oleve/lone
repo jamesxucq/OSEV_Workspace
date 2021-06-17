@@ -1,0 +1,22 @@
+clie:level("2p");
+test:tst<(yy int)int, (ex int)> {ex = yy; cc int(33) return 0x00;}
+clie:level("2p");
+test:tst<(yy int)int, (ex int)> {ex = yy; cc int(33) return 0x00;}
+clie:level("2p");
+testt:tst<(yy int)int, (ex int)> {ex = yy; cc int(33) return 0x00;}
+clie:level("2p");
+test:test<(aa uint, bb char(32))int> {type = aa; strcpy(name, bb); return 0x00;}
+clie:quit();
+       test <[type uint, name char(32), array char(128)]>;
+clie:level("2p");
+test:test<(aa uint, bb char(32))int> {type = aa; strcpy(name, bb); return 0x00;}
+ tttt:tttt<(aa uint, bb char(32))int> {type = aa; strcpy(name, bb); return 0x00;}
+clie:bye();
+clie:quit();
+ tttt:tttt<(aa uint, bb char(32))int> {type = aa; strcpy(name, bb); return 0x00;}
+clie:level("2p");
+ tjjt:tjjt<(aa uint, bb char(32))int> {type = aa; strcpy(name, bb); return 0x00;}
+ tjjt:tjjt<(aa uint, bb char(32))int> {type = aa; strcpy(name, bb); return 0x00}
+clie:level("2p");
+ toot:toot<(aa uint, bb char(32))int> {type = aa; strcpy(name, bb); return 0x00}
+clie:level("2p");

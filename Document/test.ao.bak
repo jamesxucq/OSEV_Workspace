@@ -1,0 +1,85 @@
+//0层空间, 混杂模式
+level 0;
+
+//1层空间, 定义类的方法
+level 1;
+    xxes:test1(void) void/*定义类的一个操作*/
+    {
+        (xx int, pp int);
+
+        return;	
+    }
+    xxes:test2(r int) int/*定义类的一个操作*/
+    {
+        (xx int, pt double);
+
+        return 1
+    }
+    classname:ff(x double) void/*定义类的一个操作*/
+    {
+        (tt double, p char*);
+
+        return;
+    }
+    classname:xet(void) int/*定义类的一个操作*/
+    {
+        (xx double, pp int, p char*);
+
+
+        return 2;
+    }
+
+xxes:()
+{
+
+}
+
+xxes:~()
+{
+
+}
+
+
+//2+层空间, 定义类
+level 2+;
+
+xxes:<(ax int, bx=6 int, cx double), test1(ax,bx), test2(bx,cx)>;/*定义一个类*/
+classname:<(xx=8 int, bx double, pp char[34]), ff(bx,pp), xet(bx,xx,pp), xxes:test2(xx, bx)>;/*定义一个类*/
+classtest:<(gg int, tt double, uu char[34]), ffxe(tt,gg), xetyy(tt,uu), xxes:()>;/*定义一个类*/
+classquery:<classtest:ffxe(dd double, xx int), classname:ff(dd, pp char[34])>;/*定义一个类*/
+
+
+//3层空间, 操纵对象, 创建,删除对象
+level 3;
+	/*操作数据库的关键字*/
+instance classquery from classtest, classname where xx=4;/*实例化一个类，从其他类的对象*/
+
+instance <classtest:ffxe, classname:xet> from classtest, classname where xx=4;/*创建一个临时类并实例化这个类，从其他类的对象*/
+//query classquery where tt = 1;/*查询一个类的对象，根据条件*/
+
+instance classquery(ax=3, cx=4);/*创建一个对象, 默认构造函数*/
+
+instance classquery(3, 4);/*按参数默认顺序创建一个对象，默认构造函数*/
+
+invoke classname:ff(2.0) where bx=0;/*根据条件，调用一个类的对象操作*/
+
+
+
+//4+层空间, 操纵容器对象
+level 4+;
+/*数据库内置对象函数*/
+dbo:getobject(classname:xet() == 6)* AObject; /*得到一个或一组对象，返回一个数据基础对象 AObject 指针，
+				可以在程序里转换为所要的类型的对象指针*/
+
+dbo:getobject(classname:xx == 6)* AObject; /*得到一个或一组对象，返回一个数据基础对象 AObject 指针，
+				可以在程序里转换为所要的类型的对象指针*/
+
+
+
+
+
+
+
+
+
+

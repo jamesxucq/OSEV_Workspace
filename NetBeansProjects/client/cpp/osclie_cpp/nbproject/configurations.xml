@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <logicalFolder name="osev_common" displayName="osev_common" projectFiles="true">
+        <itemPath>osev_common/action_hmap.h</itemPath>
+        <itemPath>osev_common/checksum.h</itemPath>
+        <itemPath>osev_common/commo_header.h</itemPath>
+        <itemPath>osev_common/commo_macro.h</itemPath>
+        <itemPath>osev_common/commo_stru.h</itemPath>
+        <itemPath>osev_common/encoding.h</itemPath>
+        <itemPath>osev_common/excep_code.h</itemPath>
+        <itemPath>osev_common/hash_table_ex.h</itemPath>
+        <itemPath>osev_common/md5.h</itemPath>
+        <itemPath>osev_common/oid.h</itemPath>
+        <itemPath>osev_common/osev_atomic.h</itemPath>
+        <itemPath>osev_common/paras_style.h</itemPath>
+        <itemPath>osev_common/requ_conne.h</itemPath>
+        <itemPath>osev_common/resp_conne.h</itemPath>
+        <itemPath>osev_common/string_utility.h</itemPath>
+      </logicalFolder>
+      <itemPath>OSEVConne.h</itemPath>
+      <itemPath>OSEVContain.h</itemPath>
+      <itemPath>OSVBase.h</itemPath>
+      <itemPath>clie_bzl.h</itemPath>
+      <itemPath>clie_macro.h</itemPath>
+      <itemPath>entry_utili.h</itemPath>
+      <itemPath>excep_msg.h</itemPath>
+      <itemPath>hand_method.h</itemPath>
+      <itemPath>osev_common/linux_os.h</itemPath>
+      <itemPath>osco_socks.h</itemPath>
+      <itemPath>osev_clie_cpp.h</itemPath>
+      <itemPath>osev_common/ostproto.h</itemPath>
+      <itemPath>pinvo.h</itemPath>
+      <itemPath>requ_resp.h</itemPath>
+      <itemPath>stri_utili.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <logicalFolder name="f2" displayName="osev_common" projectFiles="true">
+        <itemPath>osev_common/action_hmap.c</itemPath>
+        <itemPath>osev_common/checksum.c</itemPath>
+        <itemPath>osev_common/encoding.c</itemPath>
+        <itemPath>osev_common/hash_table_ex.c</itemPath>
+        <itemPath>osev_common/linux_os.c</itemPath>
+        <itemPath>osev_common/md5.c</itemPath>
+        <itemPath>osev_common/oid.c</itemPath>
+        <itemPath>osev_common/paras_style.c</itemPath>
+        <itemPath>osev_common/string_utility.c</itemPath>
+      </logicalFolder>
+      <itemPath>OSEVConne.cpp</itemPath>
+      <itemPath>OSEVContain.cpp</itemPath>
+      <itemPath>OSVBase.cpp</itemPath>
+      <itemPath>clie_bzl.c</itemPath>
+      <itemPath>clie_obje.c</itemPath>
+      <itemPath>excep_msg.c</itemPath>
+      <itemPath>hand_method.c</itemPath>
+      <itemPath>osco_socks.c</itemPath>
+      <itemPath>osev_clie_cpp.cpp</itemPath>
+      <itemPath>pinvo.c</itemPath>
+      <itemPath>stri_utili.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="测试文件"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>osev_common</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <commandLine>-Wall -D_LARGEFILE64_SOURCE -D_FILEOFFSET_BITS==64</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>-Wall -D_LARGEFILE64_SOURCE -D_FILEOFFSET_BITS==64</commandLine>
+        </ccTool>
+      </compileType>
+      <item path="OSEVConne.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OSEVConne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OSEVContain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OSEVContain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OSVBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OSVBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clie_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="clie_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clie_macro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clie_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="entry_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="excep_msg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="excep_msg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hand_method.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="hand_method.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osco_socks.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osco_socks.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_clie_cpp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="osev_clie_cpp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/action_hmap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/action_hmap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/checksum.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/checksum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/commo_header.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/commo_macro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/commo_stru.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/encoding.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/encoding.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/excep_code.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/hash_table_ex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/hash_table_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/linux_os.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/linux_os.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/md5.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/md5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/oid.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/oid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/osev_atomic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/ostproto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/paras_style.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/paras_style.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/requ_conne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/resp_conne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/string_utility.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/string_utility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pinvo.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pinvo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="requ_resp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="stri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="OSEVConne.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OSEVConne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OSEVContain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OSEVContain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OSVBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OSVBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clie_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="clie_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clie_macro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="clie_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="entry_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="excep_msg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="excep_msg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hand_method.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="hand_method.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osco_socks.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osco_socks.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_clie_cpp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="osev_clie_cpp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/action_hmap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/action_hmap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/checksum.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/checksum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/commo_header.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/commo_macro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/commo_stru.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/encoding.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/encoding.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/excep_code.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/hash_table_ex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/hash_table_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/linux_os.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/linux_os.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/md5.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/md5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/oid.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/oid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/osev_atomic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/ostproto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/paras_style.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/paras_style.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/requ_conne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/resp_conne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="osev_common/string_utility.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="osev_common/string_utility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="pinvo.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pinvo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="requ_resp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="stri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

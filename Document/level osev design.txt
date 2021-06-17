@@ -1,0 +1,11 @@
+// status
+osev:open(); // create open osdb, name
+osev:close();
+test:open(); // odb, just open osdb, oid
+test:close(); // odb
+
+// privileage
+osev:role();
+odb:role();
+osev:user();
+odb:user();

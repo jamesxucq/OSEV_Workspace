@@ -1,0 +1,80 @@
+osev_clie
+osev_serv
+
+clie> conn osev://fred:foobar@localhost:777/baz
+clie> clie:conn("osev://fred:foobar@localhost:777/baz");
+clie> bye
+clie> bye();
+clie> exit
+clie> conn osev://fred:foobar@localhost:777
+  connecting to: baz
+
+osev> creat("baz");
+osev> show(); // 静态数据
+osev> drop("baz");
+osev> clie:use("baz");
+  switched to db baz
+osev> clie:exit();
+osev> clie:bye
+osev> use("baz", "1,2+");
+osev> use("baz", CLAS_LEVE);
+osev> use("baz", "3,4+");
+osev> run("baz", "3,4+");
+osev> shutdown("baz"); // 关闭baz数据库
+osev> osev:shutdown(); // 关闭整个数据库服务器
+osev> runLevel("baz", "low,1,2+,3,4+");
+osev> runLevel("baz", ALL_LEVE);
+osev> runLevel("baz", "1,2+");
+osev> runLevel("baz", CLAS_LEVE);
+osev> runLevel("baz", "3,4+");
+osev> runLevel("baz", OBJE_LEVE);
+osev> runLevel("baz", "1,2+,3,4+");
+osev> runLevel("baz", DESI_LEVE);
+osev> status("baz"); // baz数据库运行状态
+osev> status(); // 数据库服务器运行状态
+osev> show("users", "baz");
+
+low-leve: runLevel("1,2+,3,4+");
+low-leve: runLevel(DESI_LEVE);
+low-leve: status(); // 这个数据库运行状态
+low-leve: show("users"); // 这个数据库运行状态
+low-leve: clie:level("1");
+low-leve: clie:level 1
+leve 1: odb:show();
+leve 1: clie:level("2+");
+leve 1: clie:level 2+
+leve 2+: clie:level("3");
+leve 2+: clie:level 3
+leve 3: show();
+leve 3: clie:level("4+");
+leve 3: clie:level 4+
+leve 4+: clie:level("low");
+leve 4+: clie:level low
+
+osev> createUser("root", "123456", "admin", ALL_LEVE);
+
+#创建角色并授权
+osev> createRole("testRole", );
+#添加Privileges给角色  
+low-leve: grantPrivilegesToRole
+
+low-leve: grantRolesToUser
+low-leve: updateRole
+
+low-leve: createUser("bazUser", "123456", "low,1rw,2+r,3rw,4+");
+low-leve: createUser("bazUser1", "123456", ALL_LEVE);
+low-leve: auth("root", "123456") 
+low-leve: users:find();
+low-leve: clie:quit();
+low-leve: clie:quit
+/*
+clie:可以有命令方式,osev:/odb:只能方法方式调用.
+权限设计,一个用户对象集合,一个权限对象集合,用户引用权限对象(用对象别名)确定用户拥有那些权限.
+权限数据信息存储在admin数据库的users,roles对象集合里
+*/
+
+
+
+
+
+

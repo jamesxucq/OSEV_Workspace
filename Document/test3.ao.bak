@@ -1,0 +1,116 @@
+//0层空间, 混杂模式 level 0
+:level(0);
+
+//1层空间, 定义类的方法 level 1
+:level(1);
+    xxes:test1 <(void) void, (xx int, pp int)>/*定义类的一个操作*/
+    {
+        return;	
+    }
+    xxes:test2 <(r int) int, (xx int, pt double)>/*定义类的一个操作*/
+    {
+        return 1
+    }
+    classname:ff <(x double) void, (tt double, p char*)>/*定义类的一个操作*/
+    {
+        return;
+    }
+    classname:xet <(void) int, (xx double, pp int, p char*)>/*定义类的一个操作*/
+    {
+        return 2;
+    }
+
+/*
+xxes:()
+{
+}
+
+xxes:~()
+{
+}
+*/
+
+MyContainer:qualifi <(ox object) bool>
+{
+    return IS_CLASS_OF(ox) == classtest;
+}
+
+MyCon:qualifi <(ox object) bool>
+{
+    if(IS_CLASS_OF(ox) == classtest){
+	if(ox:GetGg() > 0)
+	    return true;	
+    }
+    return false;
+}
+
+//2+层空间, 定义类 level 2+
+:level(2+);
+
+xxes <test1(ax,bx), test2(bx,cx)>
+[ax int, bx=6 int, cx double];/*定义一个类*/
+
+classname <ff(bx,pp), xet(bx,xx,pp), xxes:test2(xx, bx)>
+[xx=8 int, bx double, pp char[34]];/*定义一个类*/
+
+classtest <ffxe(tt,gg), xetyy(tt,uu), xxes>
+[gg int, tt double, uu char[34]];/*定义一个类*/
+
+classquery <classtest:ffxe(dd double, xx int), classname:ff(dd, pp char[34])>;/*定义一个类*/
+MyContainer <MyContainer:qualifi(), DefCtair>;
+MyCon <MyCon:qualifi(), DefCtair>;
+
+//3层空间, 操纵对象, 创建,删除对象 level 3
+:level(3);
+
+MyCon MyTestCon;
+
+MyContainer mycont;
+MyContainer myconx;
+
+TTT<(), (xt classtest(), cn classname()) int>
+[]
+{}
+
+main <(argc int, argv []char *) int> //主函数
+{
+
+    return 0;
+}
+
+:inst(classtst);
+level:echo(new classtest)> mycont;
+:echo(new classtest)> mycont;
+:echo(new classtest)> mycont;
+
+:echo(new classtest)> myconx;
+:echo(new classtest)> myconx;
+:echo(new classtest)> myconx;
+
+level:echo(new classtest)> myconx:delete();
+
+//4+层空间, 操纵容器对象 level 4+
+:level(4+);
+
+mycont:cat()| myconx;
+mycont:cat()| myconx;
+myconx:cat()> :stdout();
+myconx:cat()| FliterCon($1:GetGg()<0)> :stdout();
+myconx:cat()| MyTestCon;
+
+mycont:cat()| FliterCon($1:GetGg()<0)| mycont:delete();
+mycont:cat()| FliterCon($1:GetGg()<0)| $1.SetGg(5); 
+mycont:cat()| FliterCon($1:GetGg()<0)| $1.SetGg(5);
+:cat(mycont, myconx)> :stdout();
+:cat(mycont, myconx)> FliterCon($1:GetGg()<0 & $2:GetGg()<0)> :stdout();
+
+
+
+
+
+
+
+
+
+
+

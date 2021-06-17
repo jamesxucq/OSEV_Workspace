@@ -1,0 +1,1620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <logicalFolder name="f4" displayName="authenize" projectFiles="true">
+        <itemPath>authenize/astri_utili.h</itemPath>
+        <itemPath>authenize/authen_bzl.h</itemPath>
+        <itemPath>authenize/conve_autho.h</itemPath>
+        <itemPath>authenize/liv_list.h</itemPath>
+        <itemPath>authenize/priv_utili.h</itemPath>
+        <itemPath>authenize/privi_cache.h</itemPath>
+        <itemPath>authenize/privi_ctrl.h</itemPath>
+        <itemPath>authenize/privi_obje.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5" displayName="chk_privile" projectFiles="true">
+        <itemPath>chk_privile/privi_utili.h</itemPath>
+        <itemPath>chk_privile/privile_bzl.h</itemPath>
+        <itemPath>chk_privile/privile_obje.h</itemPath>
+        <itemPath>chk_privile/pstri_utili.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f6" displayName="comd_interp" projectFiles="true">
+        <itemPath>comd_interp/comdi_bzl.h</itemPath>
+        <itemPath>comd_interp/comdi_obje.h</itemPath>
+        <itemPath>comd_interp/inte_authe.h</itemPath>
+        <itemPath>comd_interp/inte_colle.h</itemPath>
+        <itemPath>comd_interp/inte_const.h</itemPath>
+        <itemPath>comd_interp/inte_invok.h</itemPath>
+        <itemPath>comd_interp/inte_privi.h</itemPath>
+        <itemPath>comd_interp/inte_query.h</itemPath>
+        <itemPath>comd_interp/inte_statu.h</itemPath>
+        <itemPath>comd_interp/istri_utili.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f7" displayName="const_entry" projectFiles="true">
+        <itemPath>const_entry/cons_bzl.h</itemPath>
+        <itemPath>const_entry/cons_obje.h</itemPath>
+        <itemPath>const_entry/creao.h</itemPath>
+        <itemPath>const_entry/dropo.h</itemPath>
+        <itemPath>const_entry/eacho.h</itemPath>
+        <itemPath>const_entry/estr_utili.h</itemPath>
+        <itemPath>const_entry/findo.h</itemPath>
+        <itemPath>const_entry/inser.h</itemPath>
+        <itemPath>const_entry/updat.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f8" displayName="cqutili" projectFiles="true">
+        <itemPath>cqutili/compa_utili.h</itemPath>
+        <itemPath>cqutili/conte_resou.h</itemPath>
+        <itemPath>cqutili/cstri_utili.h</itemPath>
+        <itemPath>cqutili/dope_plan.h</itemPath>
+        <itemPath>cqutili/execu_handl.h</itemPath>
+        <itemPath>cqutili/expre_analy.h</itemPath>
+        <itemPath>cqutili/expre_utili.h</itemPath>
+        <itemPath>cqutili/exptoke.h</itemPath>
+        <itemPath>cqutili/find_plan.h</itemPath>
+        <itemPath>cqutili/gramm_analy.h</itemPath>
+        <itemPath>cqutili/lexic_analy.h</itemPath>
+        <itemPath>cqutili/load_entry.h</itemPath>
+        <itemPath>cqutili/opera_utili.h</itemPath>
+        <itemPath>cqutili/optim_synta.h</itemPath>
+        <itemPath>cqutili/physi_execu.h</itemPath>
+        <itemPath>cqutili/plan_utili.h</itemPath>
+        <itemPath>cqutili/quer_plan.h</itemPath>
+        <itemPath>cqutili/stora_handl.h</itemPath>
+        <itemPath>cqutili/synta_tree.h</itemPath>
+        <itemPath>cqutili/valtok.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f9" displayName="meth_handle" projectFiles="true">
+        <itemPath>meth_handle/hand_bzl.h</itemPath>
+        <itemPath>meth_handle/hand_obje.h</itemPath>
+        <itemPath>meth_handle/metada.h</itemPath>
+        <itemPath>meth_handle/metaob.h</itemPath>
+        <itemPath>meth_handle/mfile_utili.h</itemPath>
+        <itemPath>meth_handle/mstri_utili.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f10" displayName="obje_invoke" projectFiles="true">
+        <itemPath>obje_invoke/clas_list.h</itemPath>
+        <itemPath>obje_invoke/clas_load.h</itemPath>
+        <itemPath>obje_invoke/clas_save.h</itemPath>
+        <itemPath>obje_invoke/conv_utili.h</itemPath>
+        <itemPath>obje_invoke/conve.h</itemPath>
+        <itemPath>obje_invoke/echo_clang.h</itemPath>
+        <itemPath>obje_invoke/hand_compi.h</itemPath>
+        <itemPath>obje_invoke/inherit.h</itemPath>
+        <itemPath>obje_invoke/invo_bzl.h</itemPath>
+        <itemPath>obje_invoke/invo_obje.h</itemPath>
+        <itemPath>obje_invoke/ostri_utili.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="osev_common" projectFiles="true">
+        <logicalFolder name="f1" displayName="utility" projectFiles="true">
+          <itemPath>../osev_common/utility/action_hmap.h</itemPath>
+          <itemPath>../osev_common/utility/adler32.h</itemPath>
+          <itemPath>../osev_common/utility/base64.h</itemPath>
+          <itemPath>../osev_common/utility/bloom.h</itemPath>
+          <itemPath>../osev_common/utility/cache_hmap.h</itemPath>
+          <itemPath>../osev_common/utility/hash_map.h</itemPath>
+          <itemPath>../osev_common/utility/hash_table.h</itemPath>
+          <itemPath>../osev_common/utility/hashdb.h</itemPath>
+          <itemPath>../osev_common/utility/md5.h</itemPath>
+          <itemPath>../osev_common/utility/oid_hdb.h</itemPath>
+          <itemPath>../osev_common/utility/oid_hmd.h</itemPath>
+          <itemPath>../osev_common/utility/sha1.h</itemPath>
+          <itemPath>../osev_common/utility/strptime.h</itemPath>
+          <itemPath>../osev_common/utility/tex_hdb.h</itemPath>
+          <itemPath>../osev_common/utility/tiny_pool.h</itemPath>
+          <itemPath>../osev_common/utility/utlist.h</itemPath>
+        </logicalFolder>
+        <itemPath>../osev_common/checksum.h</itemPath>
+        <itemPath>../osev_common/commo_directory.h</itemPath>
+        <itemPath>../osev_common/commo_header.h</itemPath>
+        <itemPath>../osev_common/commo_macro.h</itemPath>
+        <itemPath>../osev_common/commo_struct.h</itemPath>
+        <itemPath>../osev_common/cona_list.h</itemPath>
+        <itemPath>../osev_common/conoda.h</itemPath>
+        <itemPath>../osev_common/conoda_bzl.h</itemPath>
+        <itemPath>../osev_common/crypto_utili.h</itemPath>
+        <itemPath>../osev_common/daemonize.h</itemPath>
+        <itemPath>../osev_common/dyli_list.h</itemPath>
+        <itemPath>../osev_common/encoding.h</itemPath>
+        <itemPath>../osev_common/errmsg.h</itemPath>
+        <itemPath>../osev_common/error_code.h</itemPath>
+        <itemPath>../osev_common/excep_code.h</itemPath>
+        <itemPath>../osev_common/file_utili.h</itemPath>
+        <itemPath>../osev_common/hash_mapd_ex.h</itemPath>
+        <itemPath>../osev_common/hash_table_ex.h</itemPath>
+        <itemPath>../osev_common/hashdb_ex.h</itemPath>
+        <itemPath>../osev_common/ivk_list.h</itemPath>
+        <itemPath>../osev_common/linux_os.h</itemPath>
+        <itemPath>../osev_common/oid.h</itemPath>
+        <itemPath>../osev_common/osev_atomic.h</itemPath>
+        <itemPath>../osev_common/osev_macro.h</itemPath>
+        <itemPath>../osev_common/osev_struct.h</itemPath>
+        <itemPath>../osev_common/ostproto.h</itemPath>
+        <itemPath>../osev_common/paras_style.h</itemPath>
+        <itemPath>../osev_common/parse_utili.h</itemPath>
+        <itemPath>../osev_common/pstyl_utili.h</itemPath>
+        <itemPath>../osev_common/requ_conne.h</itemPath>
+        <itemPath>../osev_common/resp_conne.h</itemPath>
+        <itemPath>../osev_common/sconfig.h</itemPath>
+        <itemPath>../osev_common/stri_utili.h</itemPath>
+        <itemPath>../osev_common/xml_utili.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f11" displayName="quer_contain" projectFiles="true">
+        <itemPath>quer_contain/cona_utili.h</itemPath>
+        <itemPath>quer_contain/conattr.h</itemPath>
+        <itemPath>quer_contain/contain.h</itemPath>
+        <itemPath>quer_contain/creaq.h</itemPath>
+        <itemPath>quer_contain/dropq.h</itemPath>
+        <itemPath>quer_contain/eachq.h</itemPath>
+        <itemPath>quer_contain/facto.h</itemPath>
+        <itemPath>quer_contain/findq.h</itemPath>
+        <itemPath>quer_contain/parse.h</itemPath>
+        <itemPath>quer_contain/quer_bzl.h</itemPath>
+        <itemPath>quer_contain/quer_obje.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f12" displayName="run_status" projectFiles="true">
+        <itemPath>run_status/conve_rstat.h</itemPath>
+        <itemPath>run_status/oattri.h</itemPath>
+        <itemPath>run_status/recurs_data.h</itemPath>
+        <itemPath>run_status/rstat_bzl.h</itemPath>
+        <itemPath>run_status/rstat_obje.h</itemPath>
+        <itemPath>run_status/rstr_utili.h</itemPath>
+        <itemPath>run_status/stat_utili.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="stora_engine" projectFiles="true">
+        <logicalFolder name="f1" displayName="wiredtiger" projectFiles="true">
+          <itemPath>../stora_engine/wiredtiger/wiredtiger.h</itemPath>
+          <itemPath>../stora_engine/wiredtiger/wiredtiger_ext.h</itemPath>
+        </logicalFolder>
+        <itemPath>../stora_engine/stora_engine.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f13" displayName="storage" projectFiles="true">
+        <itemPath>storage/plugin_wt.h</itemPath>
+        <itemPath>storage/rive_bzl.h</itemPath>
+        <itemPath>storage/rive_stru.h</itemPath>
+        <itemPath>storage/sess_list.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="third_party" projectFiles="true">
+        <logicalFolder name="f1" displayName="jemalloc" projectFiles="true">
+          <itemPath>../third_party/jemalloc/jemalloc.h</itemPath>
+        </logicalFolder>
+        <itemPath>../third_party/access_log.h</itemPath>
+        <itemPath>../third_party/binary_logger.h</itemPath>
+        <itemPath>../third_party/common.h</itemPath>
+        <itemPath>../third_party/dmap64.h</itemPath>
+        <itemPath>../third_party/linenoise.h</itemPath>
+        <itemPath>../third_party/logger.h</itemPath>
+        <itemPath>../third_party/memory_utility.h</itemPath>
+        <itemPath>../third_party/pmap64.h</itemPath>
+        <itemPath>../third_party/third_party.h</itemPath>
+        <itemPath>../third_party/tiny_map.h</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles" displayName="源文件" projectFiles="true">
+      <logicalFolder name="f4" displayName="authenize" projectFiles="true">
+        <itemPath>authenize/astri_utili.c</itemPath>
+        <itemPath>authenize/authen_bzl.c</itemPath>
+        <itemPath>authenize/conve_autho.c</itemPath>
+        <itemPath>authenize/liv_list.c</itemPath>
+        <itemPath>authenize/priv_utili.c</itemPath>
+        <itemPath>authenize/privi_cache.c</itemPath>
+        <itemPath>authenize/privi_ctrl.c</itemPath>
+        <itemPath>authenize/privi_obje.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5" displayName="chk_privile" projectFiles="true">
+        <itemPath>chk_privile/privi_utili.c</itemPath>
+        <itemPath>chk_privile/privile_bzl.c</itemPath>
+        <itemPath>chk_privile/privile_obje.c</itemPath>
+        <itemPath>chk_privile/pstri_utili.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f6" displayName="comd_interp" projectFiles="true">
+        <itemPath>comd_interp/comdi_bzl.c</itemPath>
+        <itemPath>comd_interp/comdi_obje.c</itemPath>
+        <itemPath>comd_interp/inte_authe.c</itemPath>
+        <itemPath>comd_interp/inte_colle.c</itemPath>
+        <itemPath>comd_interp/inte_const.c</itemPath>
+        <itemPath>comd_interp/inte_invok.c</itemPath>
+        <itemPath>comd_interp/inte_privi.c</itemPath>
+        <itemPath>comd_interp/inte_query.c</itemPath>
+        <itemPath>comd_interp/inte_statu.c</itemPath>
+        <itemPath>comd_interp/istri_utili.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f7" displayName="const_entry" projectFiles="true">
+        <itemPath>const_entry/cons_bzl.c</itemPath>
+        <itemPath>const_entry/cons_obje.c</itemPath>
+        <itemPath>const_entry/creao.c</itemPath>
+        <itemPath>const_entry/dropo.c</itemPath>
+        <itemPath>const_entry/eacho.c</itemPath>
+        <itemPath>const_entry/estr_utili.c</itemPath>
+        <itemPath>const_entry/findo.c</itemPath>
+        <itemPath>const_entry/inser.c</itemPath>
+        <itemPath>const_entry/updat.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f8" displayName="cqutili" projectFiles="true">
+        <itemPath>cqutili/compa_utili.c</itemPath>
+        <itemPath>cqutili/conte_resou.c</itemPath>
+        <itemPath>cqutili/cstri_utili.c</itemPath>
+        <itemPath>cqutili/dope_plan.c</itemPath>
+        <itemPath>cqutili/execu_handl.c</itemPath>
+        <itemPath>cqutili/expre_analy.c</itemPath>
+        <itemPath>cqutili/expre_utili.c</itemPath>
+        <itemPath>cqutili/exptoke.c</itemPath>
+        <itemPath>cqutili/find_plan.c</itemPath>
+        <itemPath>cqutili/gramm_analy.c</itemPath>
+        <itemPath>cqutili/lexic_analy.c</itemPath>
+        <itemPath>cqutili/load_entry.c</itemPath>
+        <itemPath>cqutili/opera_utili.c</itemPath>
+        <itemPath>cqutili/optim_synta.c</itemPath>
+        <itemPath>cqutili/physi_execu.c</itemPath>
+        <itemPath>cqutili/plan_utili.c</itemPath>
+        <itemPath>cqutili/quer_plan.c</itemPath>
+        <itemPath>cqutili/stora_handl.c</itemPath>
+        <itemPath>cqutili/synta_tree.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f9" displayName="meth_handle" projectFiles="true">
+        <itemPath>meth_handle/hand_bzl.c</itemPath>
+        <itemPath>meth_handle/hand_obje.c</itemPath>
+        <itemPath>meth_handle/metada.c</itemPath>
+        <itemPath>meth_handle/metaob.c</itemPath>
+        <itemPath>meth_handle/mfile_utili.c</itemPath>
+        <itemPath>meth_handle/mstri_utili.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f10" displayName="obje_invoke" projectFiles="true">
+        <itemPath>obje_invoke/clas_list.c</itemPath>
+        <itemPath>obje_invoke/clas_load.c</itemPath>
+        <itemPath>obje_invoke/clas_save.c</itemPath>
+        <itemPath>obje_invoke/conv_utili.c</itemPath>
+        <itemPath>obje_invoke/conve.c</itemPath>
+        <itemPath>obje_invoke/echo_clang.c</itemPath>
+        <itemPath>obje_invoke/hand_compi.c</itemPath>
+        <itemPath>obje_invoke/inherit.c</itemPath>
+        <itemPath>obje_invoke/invo_bzl.c</itemPath>
+        <itemPath>obje_invoke/invo_obje.c</itemPath>
+        <itemPath>obje_invoke/ostri_utili.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="osev_common" projectFiles="true">
+        <logicalFolder name="f1" displayName="utility" projectFiles="true">
+          <itemPath>../osev_common/utility/action_hmap.c</itemPath>
+          <itemPath>../osev_common/utility/adler32.c</itemPath>
+          <itemPath>../osev_common/utility/base64.c</itemPath>
+          <itemPath>../osev_common/utility/bloom.c</itemPath>
+          <itemPath>../osev_common/utility/cache_hmap.c</itemPath>
+          <itemPath>../osev_common/utility/hash_map.c</itemPath>
+          <itemPath>../osev_common/utility/hash_table.c</itemPath>
+          <itemPath>../osev_common/utility/hashdb.c</itemPath>
+          <itemPath>../osev_common/utility/md5.c</itemPath>
+          <itemPath>../osev_common/utility/oid_hdb.c</itemPath>
+          <itemPath>../osev_common/utility/oid_hmd.c</itemPath>
+          <itemPath>../osev_common/utility/sha1.c</itemPath>
+          <itemPath>../osev_common/utility/strptime.c</itemPath>
+          <itemPath>../osev_common/utility/tex_hdb.c</itemPath>
+          <itemPath>../osev_common/utility/tiny_pool.c</itemPath>
+        </logicalFolder>
+        <itemPath>../osev_common/checksum.c</itemPath>
+        <itemPath>../osev_common/commo_directory.c</itemPath>
+        <itemPath>../osev_common/cona_list.c</itemPath>
+        <itemPath>../osev_common/conoda.c</itemPath>
+        <itemPath>../osev_common/conoda_bzl.c</itemPath>
+        <itemPath>../osev_common/crypto_utili.c</itemPath>
+        <itemPath>../osev_common/daemonize.c</itemPath>
+        <itemPath>../osev_common/dyli_list.c</itemPath>
+        <itemPath>../osev_common/encoding.c</itemPath>
+        <itemPath>../osev_common/errmsg.c</itemPath>
+        <itemPath>../osev_common/file_utili.c</itemPath>
+        <itemPath>../osev_common/hash_mapd_ex.c</itemPath>
+        <itemPath>../osev_common/hash_table_ex.c</itemPath>
+        <itemPath>../osev_common/hashdb_ex.c</itemPath>
+        <itemPath>../osev_common/ivk_list.c</itemPath>
+        <itemPath>../osev_common/linux_os.c</itemPath>
+        <itemPath>../osev_common/oid.c</itemPath>
+        <itemPath>../osev_common/paras_style.c</itemPath>
+        <itemPath>../osev_common/parse_utili.c</itemPath>
+        <itemPath>../osev_common/pstyl_utili.c</itemPath>
+        <itemPath>../osev_common/stri_utili.c</itemPath>
+        <itemPath>../osev_common/xml_utili.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f11" displayName="quer_contain" projectFiles="true">
+        <itemPath>quer_contain/cona_utili.c</itemPath>
+        <itemPath>quer_contain/conattr.c</itemPath>
+        <itemPath>quer_contain/contain.c</itemPath>
+        <itemPath>quer_contain/creaq.c</itemPath>
+        <itemPath>quer_contain/dropq.c</itemPath>
+        <itemPath>quer_contain/eachq.c</itemPath>
+        <itemPath>quer_contain/facto.c</itemPath>
+        <itemPath>quer_contain/findq.c</itemPath>
+        <itemPath>quer_contain/parse.c</itemPath>
+        <itemPath>quer_contain/quer_bzl.c</itemPath>
+        <itemPath>quer_contain/quer_obje.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f12" displayName="run_status" projectFiles="true">
+        <itemPath>run_status/conve_rstat.c</itemPath>
+        <itemPath>run_status/oattri.c</itemPath>
+        <itemPath>run_status/recurs_data.c</itemPath>
+        <itemPath>run_status/rstat_bzl.c</itemPath>
+        <itemPath>run_status/rstat_obje.c</itemPath>
+        <itemPath>run_status/stat_utili.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="stora_engine" projectFiles="true">
+        <logicalFolder name="f1" displayName="wiredtiger" projectFiles="true">
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f13" displayName="storage" projectFiles="true">
+        <itemPath>storage/plugin_wt.c</itemPath>
+        <itemPath>storage/rive_bzl.c</itemPath>
+        <itemPath>storage/sess_list.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="third_party" projectFiles="true">
+        <logicalFolder name="f1" displayName="jemalloc" projectFiles="true">
+        </logicalFolder>
+        <itemPath>../third_party/access_log.c</itemPath>
+        <itemPath>../third_party/binary_logger.c</itemPath>
+        <itemPath>../third_party/dmap64.c</itemPath>
+        <itemPath>../third_party/linenoise.c</itemPath>
+        <itemPath>../third_party/logger.c</itemPath>
+        <itemPath>../third_party/memory_utility.c</itemPath>
+        <itemPath>../third_party/pmap64.c</itemPath>
+        <itemPath>../third_party/tiny_map.c</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="测试文件"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>authenize</pElem>
+            <pElem>chk_privile</pElem>
+            <pElem>comd_interp</pElem>
+            <pElem>const_entry</pElem>
+            <pElem>cqutili</pElem>
+            <pElem>meth_handle</pElem>
+            <pElem>obje_invoke</pElem>
+            <pElem>quer_contain</pElem>
+            <pElem>run_status</pElem>
+            <pElem>storage</pElem>
+            <pElem>../third_party</pElem>
+            <pElem>../osev_common</pElem>
+            <pElem>../osev_common/utility</pElem>
+            <pElem>../stora_engine</pElem>
+          </incDir>
+          <commandLine>-Wall -D_DEBUG -D_OSEV_SDKIT -D_LARGEFILE64_SOURCE -D_FILEOFFSET_BITS==64 -DNOAUTH</commandLine>
+        </cTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <item path="../osev_common/checksum.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/checksum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_directory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_directory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_header.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_macro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_struct.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/cona_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/cona_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/conoda.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/conoda.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/conoda_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/conoda_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/crypto_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/crypto_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/daemonize.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/daemonize.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/dyli_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/dyli_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/encoding.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/encoding.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/errmsg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/errmsg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/error_code.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/excep_code.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/file_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/file_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/hash_mapd_ex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/hash_mapd_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/hash_table_ex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/hash_table_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/hashdb_ex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/hashdb_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/ivk_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/ivk_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/linux_os.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/linux_os.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/oid.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/oid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/osev_atomic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/osev_macro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/osev_struct.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/ostproto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/paras_style.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/paras_style.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/parse_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/parse_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/pstyl_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/pstyl_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/requ_conne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/resp_conne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/sconfig.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/stri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/stri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/action_hmap.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/action_hmap.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/adler32.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/adler32.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/base64.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/base64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/bloom.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/bloom.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/cache_hmap.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/cache_hmap.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hash_map.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hash_map.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hash_table.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hash_table.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hashdb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hashdb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/md5.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/md5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/oid_hdb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/oid_hdb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/oid_hmd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/oid_hmd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/sha1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/sha1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/strptime.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/strptime.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/tex_hdb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/tex_hdb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/tiny_pool.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/tiny_pool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/utlist.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/xml_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/xml_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../stora_engine/stora_engine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../stora_engine/wiredtiger/wiredtiger.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../stora_engine/wiredtiger/wiredtiger_ext.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../third_party/access_log.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/access_log.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/binary_logger.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/binary_logger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/dmap64.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/dmap64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/jemalloc/jemalloc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/linenoise.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/linenoise.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/logger.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/logger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/memory_utility.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/memory_utility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/pmap64.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/pmap64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/third_party.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/tiny_map.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/tiny_map.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/astri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/astri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/authen_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/authen_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/conve_autho.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/conve_autho.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/liv_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/liv_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/priv_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/priv_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/privi_cache.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/privi_cache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/privi_ctrl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/privi_ctrl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/privi_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/privi_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="chk_privile/privi_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="chk_privile/privi_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="chk_privile/privile_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="chk_privile/privile_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="chk_privile/privile_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="chk_privile/privile_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="chk_privile/pstri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="chk_privile/pstri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/comdi_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/comdi_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/comdi_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/comdi_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_authe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_authe.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_colle.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_colle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_const.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_const.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_invok.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_invok.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_privi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_privi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_query.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_statu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_statu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/istri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/istri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/cons_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/cons_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/cons_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/cons_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/creao.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/creao.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/dropo.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/dropo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/eacho.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/eacho.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/estr_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/estr_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/findo.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/findo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/inser.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/inser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/updat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/updat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/compa_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/compa_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/conte_resou.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/conte_resou.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/cstri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/cstri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/dope_plan.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/dope_plan.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/execu_handl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/execu_handl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/expre_analy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/expre_analy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/expre_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/expre_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/exptoke.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/exptoke.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/find_plan.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/find_plan.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/gramm_analy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/gramm_analy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/lexic_analy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/lexic_analy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/load_entry.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/load_entry.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/opera_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/opera_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/optim_synta.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/optim_synta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/physi_execu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/physi_execu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/plan_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/plan_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/quer_plan.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/quer_plan.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/stora_handl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/stora_handl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/synta_tree.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/synta_tree.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/valtok.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/hand_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/hand_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/hand_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/hand_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/metada.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/metada.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/metaob.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/metaob.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/mfile_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/mfile_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/mstri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/mstri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_load.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_load.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_save.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_save.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/conv_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/conv_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/conve.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/conve.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/echo_clang.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/echo_clang.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/hand_compi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/hand_compi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/inherit.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/inherit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/invo_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/invo_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/invo_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/invo_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/ostri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/ostri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/cona_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/cona_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/conattr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/conattr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/contain.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/contain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/creaq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/creaq.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/dropq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/dropq.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/eachq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/eachq.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/facto.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/facto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/findq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/findq.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/parse.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/parse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/quer_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/quer_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/quer_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/quer_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/conve_rstat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/conve_rstat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/oattri.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/oattri.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/recurs_data.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/recurs_data.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/rstat_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/rstat_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/rstat_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/rstat_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/rstr_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/stat_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/stat_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="storage/plugin_wt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="storage/plugin_wt.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="storage/rive_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="storage/rive_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="storage/rive_stru.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="storage/sess_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="storage/sess_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <item path="../osev_common/checksum.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/checksum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_directory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_directory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_header.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_macro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/commo_struct.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/cona_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/cona_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/conoda.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/conoda.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/conoda_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/conoda_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/crypto_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/crypto_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/daemonize.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/daemonize.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/dyli_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/dyli_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/encoding.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/encoding.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/errmsg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/errmsg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/error_code.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/excep_code.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/file_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/file_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/hash_mapd_ex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/hash_mapd_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/hash_table_ex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/hash_table_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/hashdb_ex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/hashdb_ex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/ivk_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/ivk_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/linux_os.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/linux_os.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/oid.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/oid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/osev_atomic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/osev_macro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/osev_struct.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/ostproto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/paras_style.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/paras_style.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/parse_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/parse_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/pstyl_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/pstyl_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/requ_conne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/resp_conne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/sconfig.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/stri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/stri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/action_hmap.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/action_hmap.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/adler32.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/adler32.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/base64.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/base64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/bloom.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/bloom.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/cache_hmap.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/cache_hmap.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hash_map.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hash_map.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hash_table.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hash_table.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hashdb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/hashdb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/md5.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/md5.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/oid_hdb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/oid_hdb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/oid_hmd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/oid_hmd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/sha1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/sha1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/strptime.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/strptime.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/tex_hdb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/tex_hdb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/tiny_pool.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/tiny_pool.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/utility/utlist.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../osev_common/xml_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../osev_common/xml_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../stora_engine/stora_engine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../stora_engine/wiredtiger/wiredtiger.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../stora_engine/wiredtiger/wiredtiger_ext.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../third_party/access_log.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/access_log.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/binary_logger.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/binary_logger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/dmap64.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/dmap64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/jemalloc/jemalloc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/linenoise.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/linenoise.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/logger.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/logger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/memory_utility.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/memory_utility.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/pmap64.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/pmap64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/third_party.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../third_party/tiny_map.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../third_party/tiny_map.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/astri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/astri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/authen_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/authen_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/conve_autho.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/conve_autho.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/liv_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/liv_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/priv_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/priv_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/privi_cache.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/privi_cache.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/privi_ctrl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/privi_ctrl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="authenize/privi_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="authenize/privi_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="chk_privile/privi_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="chk_privile/privi_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="chk_privile/privile_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="chk_privile/privile_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="chk_privile/privile_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="chk_privile/privile_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="chk_privile/pstri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="chk_privile/pstri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/comdi_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/comdi_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/comdi_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/comdi_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_authe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_authe.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_colle.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_colle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_const.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_const.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_invok.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_invok.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_privi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_privi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_query.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_statu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/inte_statu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comd_interp/istri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="comd_interp/istri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/cons_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/cons_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/cons_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/cons_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/creao.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/creao.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/dropo.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/dropo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/eacho.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/eacho.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/estr_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/estr_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/findo.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/findo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/inser.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/inser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="const_entry/updat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="const_entry/updat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/compa_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/compa_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/conte_resou.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/conte_resou.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/cstri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/cstri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/dope_plan.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/dope_plan.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/execu_handl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/execu_handl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/expre_analy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/expre_analy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/expre_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/expre_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/exptoke.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/exptoke.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/find_plan.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/find_plan.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/gramm_analy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/gramm_analy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/lexic_analy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/lexic_analy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/load_entry.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/load_entry.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/opera_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/opera_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/optim_synta.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/optim_synta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/physi_execu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/physi_execu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/plan_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/plan_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/quer_plan.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/quer_plan.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/stora_handl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/stora_handl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/synta_tree.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cqutili/synta_tree.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cqutili/valtok.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/hand_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/hand_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/hand_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/hand_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/metada.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/metada.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/metaob.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/metaob.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/mfile_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/mfile_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="meth_handle/mstri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="meth_handle/mstri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_load.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_load.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_save.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/clas_save.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/conv_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/conv_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/conve.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/conve.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/echo_clang.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/echo_clang.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/hand_compi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/hand_compi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/inherit.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/inherit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/invo_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/invo_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/invo_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/invo_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="obje_invoke/ostri_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="obje_invoke/ostri_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/cona_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/cona_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/conattr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/conattr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/contain.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/contain.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/creaq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/creaq.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/dropq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/dropq.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/eachq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/eachq.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/facto.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/facto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/findq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/findq.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/parse.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/parse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/quer_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/quer_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quer_contain/quer_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="quer_contain/quer_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/conve_rstat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/conve_rstat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/oattri.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/oattri.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/recurs_data.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/recurs_data.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/rstat_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/rstat_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/rstat_obje.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/rstat_obje.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/rstr_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="run_status/stat_utili.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="run_status/stat_utili.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="storage/plugin_wt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="storage/plugin_wt.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="storage/rive_bzl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="storage/rive_bzl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="storage/rive_stru.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="storage/sess_list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="storage/sess_list.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,42 @@
+/*
+用户分两种,一种系统用户(osev),一种数据库用户(odb).
+系统用户主要维护数据库服务器和增删数据库用户和权限.
+系统用户拥有数据库用户的所有权限.
+数据库用户主要是使用数据库.
+*/
+
+// :level(osev);
+osev:privile:user(ADD, "xman", "123456");
+osev:privile:user(ADD, "sman", "123456");
+odb:privile:user(ADD, "david", "123456"); // admin
+odb:privile:user(ADD, "james", "123456"); // odb user
+odb:privile:user(DEL, "james", "123456");
+odb:privile:user(GRANT, "james", "admin");
+odb:privile:user(REVOKE, "james", "admin");
+
+// :level(osev);
+osev:privile:role(ADD, "root"); // admin role
+osev:privile:role(ADD, "super"); // admin role
+odb:privile:role(ADD, "rd2"); // odb role
+odb:privile:role(ADD, "rd3"); // odb role
+odb:privile:role(ADD, "rd4"); // odb role
+odb:privile:role(DEL, "rd4");
+osev:privile:role(GRANT, "root", ALL_PRIVI); // READ|EXECU
+osev:privile:role(GRANT, "root1", "testdb", ODBM);
+odb:privile:role(GRANT, "rd3", "xodb", ALL_PRIVI);
+odb:privile:role(GRANT, "rd3", "xodb:2p", ALL_PRIVI);
+odb:privile:role(GRANT, "rd3", "xodb:4+", ALL_PRIVI);
+odb:privile:role(GRANT, "rd3", "xodb:xcon", DROP);
+odb:privile:role(REVOKE, "rd3", "xodb", ALL_PRIVI);
+
+// :level(osev);
+osev:privile:list(ROLE, "super");
+osev:privile:list(USER, "james");
+odb:privile:list(ROLE, "rd2");
+osev:privile:list(ROLE);
+odb:privile:list(ROLE);
+osev:privile:list(USER);
+odb:privile:list(USER);
+
+//
+odb:privile:role(ADD, "develop");

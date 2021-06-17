@@ -1,0 +1,309 @@
+
+免费注册登录 备案 控制台 
+ 
+
+
+登录 | 注册 
+博客 云计算 问答 大数据 聚能聊云生态 直播 阿里开源 云课堂 云栖神侠 论坛 专题 公众号 商城
+云栖社区>博客列表>正文
+MongoDB如何使用wiredTiger？
+yunnotes 2015-12-09 14:26:38 浏览2058 评论2
+数据存储与数据库 云数据库MongoDB版
+
+摘要： Mongodb 3.0支持用户自定义存储引擎，用户可配置使用mmapv1或者wiredTiger存储引擎，本文主要介绍Mongodb是如何使用wiredTiger数据库作为底层的数据存储层。目前还没有读过wiredTiger的源码，本文的内容都是基于wiredTiger官方文档，以及Mongodb.
+
+Mongodb 3.0支持用户自定义存储引擎，用户可配置使用mmapv1或者wiredTiger存储引擎，本文主要介绍Mongodb是如何使用wiredTiger数据库作为底层的数据存储层。目前还没有读过wiredTiger的源码，本文的内容都是基于wiredTiger官方文档，以及Mongodb对wiredTiger封装代码，有问题请指出。
+
+wiredTiger引擎存储布局
+wiredTiger（简称WT）支持行存储、列存储以及LSM等3种存储形式，Mongodb使用时，只是将其作为普通的KV存储引擎来使用，mongodb的每个集合对应一个WT的table，table里包含多个Key-value pairs，以B树形式存储。
+
+
+以下是一个典型的使用WT存储引擎的数据目录布局（配置了directoryPerDB选项，启用了journal）
+
+$tree
+.
+├── admin
+│   ├── collection-11--5764503550749656746.wt
+│   ├── collection-14--6907424972913303461.wt
+│   ├── collection-16--6907424972913303461.wt
+│   ├── collection-20--6907424972913303461.wt
+│   ├── collection-8--6907424972913303461.wt
+│   ├── collection-9--5764503550749656746.wt
+│   ├── index-10--5764503550749656746.wt
+│   ├── index-12--5764503550749656746.wt
+│   ├── index-13--5764503550749656746.wt
+│   ├── index-15--6907424972913303461.wt
+│   ├── index-17--6907424972913303461.wt
+│   └── index-9--6907424972913303461.wt
+├── journal
+│   ├── WiredTigerLog.0000000003
+│   └── WiredTigerPreplog.0000000001
+├── local
+│   ├── collection-0--5764503550749656746.wt
+│   ├── collection-2--5764503550749656746.wt
+│   ├── collection-4--5764503550749656746.wt
+│   ├── collection-6--5764503550749656746.wt
+│   ├── collection-7--5764503550749656746.wt
+│   ├── index-1--5764503550749656746.wt
+│   ├── index-3--5764503550749656746.wt
+│   ├── index-5--5764503550749656746.wt
+│   └── index-8--5764503550749656746.wt
+├── _mdb_catalog.wt
+├── mongod.lock
+├── products
+│   ├── collection-6--6907424972913303461.wt
+│   └── index-7--6907424972913303461.wt
+├── sizeStorer.wt
+├── storage.bson
+├── WiredTiger
+├── WiredTiger.basecfg
+├── WiredTiger.lock
+├── WiredTiger.turtle
+└── WiredTiger.wt
+WiredTiger*等文件存储WT的一些配置信息。
+
+local、journal、admin、products等每个目录代表一个DB，DB里包含集合数据及集合的索引数据，每个集合的数据对应一个WT的table（一个.wt后缀的文件），集合的每项索引也对应一个WT的table。
+
+journal目录下存储WT的write ahead log，当服务crash时，可通过log来恢复数据。
+
+_mdb_catalog.wt里存储了所有集合的元数据，包括集合对应的WT table名字，集合的创建选项，集合的索引信息等，WT存储引擎初始化时，会从_mdb_catalog.wt里读取所有的集合信息，并加载元信息到内存。
+
+集合名与WT table名的对应关系可以通过db.collection.stats()获取
+
+mongo-9552:PRIMARY> db.system.users.stats().wiredTiger.uri
+statistics:table:admin/collection-10--1436312956560417970
+也可以直接dump出_mdb_catalog.wt里的内容查看，dump出的内容为BSON格式，阅读起来不是很方便。
+
+wt -C "extensions=[/usr/local/lib/libwiredtiger_snappy.so]"  -h . dump table:_mdb_catalog
+sizeStorer.wt里存储所有集合的容量信息，如文档数、文档总大小等，当插入、删除、更新文档时，这些信息会先cache到内存，没操作1000次会刷盘一次；mongod进程crash可能导致sizeStorer.wt里的数据与实际信息不匹配，可通过validate()命令来重新扫描集合以订正统计信息。
+
+wiredTiger API
+WT官方提供了C、java、python API，mongodb使用C API来访问WT数据库，主要包括3个核心的数据结构。
+
+WT_CONNECTION代表一个到WT数据库的连接，通常每个进程只用建立一个连接，WT_CONNECTION的所有方法都是线程安全的。
+WT_SESSION代表一个数据库操作的上下文，每个线程需创建独立的session。
+WT_CURSOR用于操作某个数据集（如某个table、file），可使用cursor来进行数据库插入、查询操作。
+如下是使用wiredTiger C API的示例，展示了如何向WT数据库里插入数据，更多示例参考这里。
+
+#include <wiredtiger.h>
+
+char *home = "WT_HOME";
+
+int main(void)
+{
+    WT_CONNECTION *conn;
+    WT_CURSOR *cursor;
+    WT_SESSION *session;
+    const char *key, *value;
+    int ret;
+
+    /* Open a connection to the database */
+    ret = wiredtiger_open(home, NULL, "create", &conn);
+
+    /* Open a session in conn */
+    ret = conn->open_session(conn, NULL, NULL, &session);
+
+    /* Create table if not exist */
+    ret = session->create(session,
+        "table:access", "key_format=S,value_format=S");
+
+    /* Open a cursor and insert key-value pair */
+   ret = session->open_cursor(session,
+        "table:access", NULL, NULL, &cursor);
+    cursor->set_key(cursor, "key1");
+    cursor->set_value(cursor, "value1");
+    ret = cursor->insert(cursor);
+
+    /* Close conn */
+    ret = conn->close(conn, NULL);
+
+   return ret;
+}
+上述示例包含如下步骤
+
+wiredtiger_open()建立连接
+conn->open_session建立session
+session->create()创建access表，并指定key、value格式
+session->open_cursor创建cursor，并插入key-value
+访问结束后conn->close()关闭连接
+wiredTiger in Mongodb
+Mongodb使用wiredTiger作为存储引擎时，直接使用其C API来存储、查询数据。
+
+wiredtiger_open
+
+Mongodb在WiredTigerKVEngine构造的时候wiredtiger_open建立连接，在其析构时关闭连接，其指定的配置参数为：
+
+配置项	含义说明
+create	如果数据库不存在则先创建
+cache_size=xx	cache大小，使用Mongod cacheSizeGB配置项的值
+session_max=20000	最大session数量
+eviction=(threads_max=4)	淘汰线程最大数量，用于将page从cache逐出
+statistics=(fast)	统计数据采用fast模式
+statistics_log=(wait=xx)	统计数据采集周期，使用mongod statisticsLogDelaySecs配置项的值
+file_manager=(close_idle_time=100000)	空闲文件描述符回收时间
+checkpoint=(wait=xx,log_size:2G)	开启周期性checkpoint，采用Mongod syncPeriodSecs配置项的值
+log=(enabled=true,archive=true...	启用write ahead log，达到2G时触发checkpoint
+重点介绍下checkpoint和log2个配置项，其决定了数据持久化的安全级别；wiredTiger支持2种数据持久化级别，分别是Checkpoint durability 和 Commit-level durability。
+
+Checkpoint durability
+wiredTiger支持对当前的数据集进行checkpoint，checkpoint代表当前数据集的一个快照（或镜像），wiredTiger可配置周期性的进行checkpoint（或当log size达到一定阈值是做checkpoint）。
+
+比如WT配置了周期性checkpoint（没开启log），每5分钟做一次checkpoint，在T1时刻做了一次Checkpoint得到数据集C1，则在接下来的5分钟内，如果服务crash，则WT只能将数据恢复到T1时刻。
+
+Commit-level durability
+wiredTiger通过write ahead log来支持commit-level durability。
+
+开启write ahead log后，对WT数据库的更新都会先写log，log的刷盘策略（通过trasaction_sync配置项 或者 begion_transaction参数指定）决定了持久化的级别。
+
+mongodb的使用的持久化级别配置为
+
+checkpoint=(wait=60,log_size=2G)
+log=(enabled=true,archive=true,path=journal,compressor=snappy)
+begin_transcation("sync=true")
+具体策略为
+
+每60s做一次checkpoint
+开启write ahead log，当log size达到2GB时做checkpoint；并自动删除不需要的log文件。
+每次commit_transaction时，调用fsync持久化已经commit的log。
+基于上述配置，mongodb可以保证服务crash时，所有已经commit的操作都能通过log恢复。
+
+open_session
+
+mongodb使用session pool来管理WT的session，isolation=snapshot指定隔离级别为snapshot。
+
+ conn->open_session(conn, NULL, "isolation=snapshot", &_session);
+create table
+
+创建数据集合的参数如下
+
+配置项	含义说明
+create	如果集合不存在则先创建
+memory_page_max=10m	page内存最大值
+split_pct=90	page split百分比
+checksum=on	开启校验
+key_format=q,value_format=u	key为int64_t类型（RecordId），value为WT_ITEM
+数据集合的key为int64_t类型的RecordId，RerordId在集合内部唯一，value为二进制的BSON格式。
+
+创建索引集合的参数如下
+
+配置项	含义说明
+create	如果集合不存在则先创建
+type=file,internal_page_max=16k,leaf_page_max=16k	配置树节点大小
+checksum=on	开启校验
+key_format=u,value_format=u	key-value均为WT_ITEM格式
+索引集合的key、value均为二进制数据。
+
+table创建好之后，就可以往table
+
+比如，往某个集合插入一组元素
+
+db.coll.insert({_id: "apple", count: 100});
+db.coll.insert({_id: "peach", count: 200});
+db.coll.insert({_id: "grape", count: 300});
+对应一个coll的数据集合，其对应的WT数据类似于
+
+key	value
+1	{_id: "apple", count: 100}
+2	{_id: "peach", count: 200}
+3	{_id; "grape", count: 300}
+以及基于id的索引集合，其对应的WT数据类似于
+
+key	value
+"apple"	1
+"peach"	2
+"grape"	3
+接下来如果在count上建索引，索引会存储在新的WT table里，数据类似于
+
+db.coll.ensureIndex({count: -1})
+key	value
+300	3
+200	2
+100	1
+总结
+Mongodb使用wiredTiger存储引擎时，其将wiredTiger作为一个KV数据库来使用，mongodb的集合和索引都对应一个wiredTiger的table。并依赖于wiredTiger提供的checkpoint + write ahead log机制提供高数据可靠性。
+
+
+用云栖社区APP，舒服~
+
+【云栖快讯】《阿里持续集成与持续交付最佳实践》系列直播来啦！解析痛点与挑战、研究案例，摆脱手工作坊式研发，赶紧报名！  详情请点击
+评论文章 (2) (3) (3) 分享到:
+上一篇：MongoDB复制集原理下一篇：MongoDB Wiredtiger存储引擎实现原理
+相关文章
+
+MongoDB无法启动，如何恢复数据？ MongoDB World 2016参会全记录 MongoDB WiredTiger 存储引擎cache… MongoDB Wiredtiger存储引擎实现原理 MongoDB多存储引擎支持机制 把mmapv1存储引擎存储的mongodb3.0数据库数… 把mmapv1存储引擎存储的mongodb3.0数据库数… MongoDB 3.2.9 请求 hang 分析及 wi… MongoDB 如何保证 oplog 顺序？ MongoDB WiredTiger 存储引擎cache…
+网友评论
+
+ 1F
+2hf 2016-01-26 09:25:32
+赞
+
+ 0   0
+ 2F
+逃跑的肉丸 2016-11-23 10:43:33
+麻烦问一下，WiredTiger引擎下，数据文件的增长有规律吗？比如像mmapv1引擎那样，每增加一个数据文件，大小都是原来文件的2倍，最大限制是2G；所以我想知道这个WiredTiger有这个设置吗？
+
+ 0   1
+ 
+yunnotes 2016-11-23 18:55:19
+按需增长
+
+ 0   
+
+写下你的评论…
+登录后可评论，请 登录 或 注册
+评论
+ 关注
+yunnotes  专家认证
+张友东，花名林青，阿里云数据库组技术专家，主要...
+76篇文章|271关注
+文中提到的云产品
+ 云数据库 MongoDB 版
+基于飞天分布式系统和高性能存储，提供三节点副本集的高可用架构，容灾切换，故障迁移完全透明化。并提供专业的数据库在...
+了解更多
+ 云数据库 Memcache 版
+一种高性能、高可靠、可平滑扩容的分布式内存数据库服务。
+了解更多
+ 对象存储OSS
+提供海量、安全和高可靠的云存储服务。RESTful API的平台无关性，容量和处理能力的弹性扩展，按实际容量付费...
+了解更多
+ 云服务器ECS
+为您提供简单高效、处理能力可弹性伸缩的计算服务，帮助您快速构建更稳定、安全的应用，提升运维效率，降低 IT 成本...
+了解更多
+目录收起
+1wiredTiger引擎存储布局
+2wiredTiger API
+3wiredTiger in Mongodb
+4wiredtiger_open
+5Checkpoint durability
+6Commit-level durability
+7open_session
+8create table
+9总结
+博主其他文章更多>
+MongoDB dropDatabse 后，数据能恢复么？
+MongoDB查询优化：从 10s 到 10ms
+MongoDB CPU 利用率高，怎么破？
+MongoDB无法启动，如何恢复数据？
+MongoDB journal 与 oplog，究竟谁先写入？
+分片集群Mongos到Shard请求管理
+MongoDB秒级备份恢复(SDCC上海站数据库核心技术与应用实战峰会分享PPT)
+MongoDB 杭州用户会全记录（千寻位置、妈妈帮、阿里云专家等精彩分享）
+MongoDB 3.4 Collation 特性解析
+MongoDB Driver：使用正确的姿势连接分片集群
+相关话题更多>
+MongoDB 使用场景及运维管理问题交流探讨
+人工智能人才抢夺战，30万太少，100万不多
+数据爆炸时代的困惑 - 如何让数据快速发挥价值
+聊聊JStorm的最佳实践
+聚能聊话题专家齐拜年！技术贺新春，福利抢不停！
+ 
+
+版权声明
+本社区内容由互联网用户自发贡献，本社区不拥有所有权，也不承担相关法律责任。如果您发现本社区中有涉嫌抄袭的内容，欢迎发送邮件：zhaoyunqi@list.alibaba-inc.com 进行举报，并提供相关证据，一经查实，本社区将立刻删除涉嫌侵权内容。
+关于我们 法律声明 廉正举报 友情链接 中国站
+阿里巴巴集团 淘宝网 天猫 聚划算 全球速卖通 阿里巴巴国际交易市场 1688 阿里妈妈 飞猪 阿里云计算 YunOS 阿里通信 万网 高德 UC 友盟 虾米 阿里星球 来往 钉钉 支付宝
+
+? 2009-2017 Aliyun.com 版权所有 ICP证：浙B2-20080101
+
+    浙公网安备 33010002000099号
+ 

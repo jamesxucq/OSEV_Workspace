@@ -1,0 +1,55 @@
+conne osvp://10.0.0.103:8848/
+xxx:open();
+conne osvp://10.0.0.103:8848/
+status(AUTH, STAT);
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/admin
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/xxx
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/xxx
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/xxx
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/admin
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/admin
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/admin
+conne osvp://10.0.0.103:8848/
+("admin");
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/admin
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/xxx
+conne osvp://10.0.0.103:8848/
+conne osvp://10.0.0.103:8848/admin
+conne osvp://10.0.0.103:8848/
+ls
+conne osvp://10.0.0.103:8848/
+conne osvp://xman:******@10.0.0.103:8848/
+conne osvp://david:******@10.0.0.103:8848/
+conne osvp://xman:******@10.0.0.103:8848/
+conne osvp://xman:******@10.0.0.103:8848/xodb
+conne osvp://super:******@10.0.0.103:8848/
+conne osvp://xman:******@10.0.0.103:8848/
+conne osvp://rd1:******@10.0.0.103:8848/xodb
+conne osvp://xman:******@10.0.0.103:8848/xodb
+conne osvp://xman:******@10.0.0.103:8848/
+conne osvp://rd1:******@10.0.0.103:8848/todb
+conne osvp://xman:******@10.0.0.103:8848/
+exit();
+bye();
+conne osvp://xman:******@10.0.0.103:8848/
+conne osvp://rdt:******@10.0.0.103:8848/todb
+conne osvp://xman:******@10.0.0.103:8848/
+conne osvp://rdt:******@10.0.0.103:8848/todb
+conne osvp://rdt:******@10.0.0.103:8848/
+ls
+conne osvp://rdt:******@10.0.0.103:8848/todb
+conne osvp://rdt:******@10.0.0.103:8848/
+conne osvp://rdt:******@10.0.0.103:8848/todb
+ls
+quit
+quit:
+bye
